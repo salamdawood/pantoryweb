@@ -1,0 +1,9 @@
+<header class="site-header wrap">
+  <a class="brand" href="{{ '' | assetUrl }}" aria-label="Pantory home"{% if page.url == '/' %} aria-current="page"{% endif %}>Pantory</a>
+  <nav aria-label="Main navigation">
+    <a href="{{ 'features/' | assetUrl }}"{% if page.url == '/features/' %} aria-current="page"{% endif %}>Features</a>
+    <a href="{{ 'blog/' | assetUrl }}"{% if page.url == '/blog/' %} aria-current="page"{% elif navSection == 'blog' %} aria-current="location"{% endif %}>Blog</a>
+    <a href="{{ 'support/' | assetUrl }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}>Support</a>
+    <a class="button button-small" href="{{ site.appStore }}">Download</a>
+  </nav>
+</header>

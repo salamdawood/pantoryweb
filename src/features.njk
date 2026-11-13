@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+supporting: true
+permalink: /features/
+title: Pantory Features — Inventory, scanning, expiration tracking & more
+description: Explore Pantory’s inventory tools, barcode lookup, reminders, iCloud sync, History, and widget. Compare what’s included for free and with Pantory Pro.
+---
+<div class="supporting-page wrap">
+  <header class="page-intro"><p class="section-label">Pantory features</p><h1>What’s in your kitchen,<br>all in one place.</h1><p>From adding a product to finishing it, keep the details you need to manage your pantry, fridge, and freezer.</p></header>
+  <nav class="section-nav" aria-label="On this page"><a href="#inventory">Inventory</a><a href="#adding-items">Adding items</a><a href="#expiration">Expiration tracking</a><a href="#icloud">Sync & sharing</a><a href="#history">History & widget</a><a href="#free-pro">Free & Pro</a></nav>
+  <section id="inventory" class="capability-row" aria-labelledby="inventory-heading">
+    <div><p class="section-label">Keep the details together</p><h2 id="inventory-heading">Manage your food inventory.</h2><p>Track items across the pantry, fridge, and freezer with quantities and locations. Search your inventory to check whether something is already there.</p><ul><li>Adjust quantities as you use or replenish items.</li><li>Add optional categories to organize your inventory.</li><li>Include photos to help identify products.</li></ul></div>
+    <div class="capability-image">{% set shot = 'inventory-detail' %}{% include 'components/screenshot.njk' %}</div>
+  </section>
+  <section id="adding-items" class="capability-block" aria-labelledby="adding-heading"><h2 id="adding-heading">Scan a barcode or add an item manually.</h2><p>Barcode lookup can retrieve available product information from Open Food Facts. Review the details and record your quantity, location, and expiration date.</p><p>Coverage varies. Information may be incomplete, inaccurate, or unavailable; manual entry is always the fallback. Scanning does not read a product’s physical expiration date.</p></section>
+  <section id="expiration" class="capability-row" aria-labelledby="expiration-heading">
+    <div><p class="section-label">Dates you record</p><h2 id="expiration-heading">See what’s coming up.</h2><p>Enter expiration dates manually. The Expiring view shows items in date order so you can see what to use next.</p><ul><li>Free reminders are fixed at three days before expiry.</li><li>Pantory Pro lets you choose up to two reminder times.</li><li>Notifications require permission in iPhone Settings.</li></ul></div>
+    <div class="capability-image">{% set shot = 'expiring' %}{% include 'components/screenshot.njk' %}</div>
+  </section>
+  <section id="icloud" class="capability-block" aria-labelledby="icloud-heading"><h2 id="icloud-heading">Sync your pantry. Share with your household.</h2><div class="capability-pair"><div><h3>Personal iCloud sync</h3><p>Personal synchronization is included for free and uses your Apple iCloud account.</p></div><div><h3>Household sharing <span class="pro-badge">Pro</span></h3><p>Invite people in your household to view and update a shared pantry through iCloud. Household sharing requires Pantory Pro and an Apple iCloud account.</p></div></div><p>No separate Pantory account or signup is required.</p></section>
+  <section id="history" class="capability-block" aria-labelledby="history-heading"><h2 id="history-heading">Keep a record. Check at a glance.</h2><div class="capability-pair"><div><h3>Pantry History</h3><p>View finished items in History. They don’t count toward the active-item limit. Add Again from History without rescanning requires Pro.</p></div><div><h3>Home Screen widget</h3><p>The widget shows the next three expiring items. It’s included for free.</p></div></div></section>
+  <section id="free-pro" class="comparison-section" aria-labelledby="comparison-heading"><h2 id="comparison-heading">Free to start. More with Pro.</h2><p>See the App Store for current purchase options.</p><div class="table-scroll"><table class="comparison-table"><caption>What’s included in Pantory Free and Pantory Pro</caption><thead><tr><th scope="col">Capability</th><th scope="col">Free</th><th scope="col">Pro</th></tr></thead><tbody>
+    <tr><th scope="row">Active inventory items</th><td>Up to 75</td><td>Unlimited</td></tr>
+    <tr><th scope="row">Manual entry, barcode scanning & lookup</th><td>Included</td><td>Included</td></tr>
+    <tr><th scope="row">Quantities, locations, optional categories & photos</th><td>Included</td><td>Included</td></tr>
+    <tr><th scope="row">Search, recorded expiration dates & Expiring view</th><td>Included</td><td>Included</td></tr>
+    <tr><th scope="row">Expiration reminders</th><td>Three days before expiry</td><td>Up to two configurable times</td></tr>
+    <tr><th scope="row">Personal iCloud sync, view History & widget</th><td>Included</td><td>Included</td></tr>
+    <tr><th scope="row">Household sharing</th><td>Requires Pro</td><td>Included</td></tr>
+    <tr><th scope="row">Add Again from History</th><td>Requires Pro</td><td>Included</td></tr>
+  </tbody></table></div><p class="fine-print">Finished items do not count toward the 75-active-item free limit.</p></section>
+  <section class="supporting-download" aria-labelledby="features-download"><h2 id="features-download">Keep track with Pantory.</h2><p>Pantry inventory for iPhone.</p>{% include 'components/app-store.njk' %}</section>
+</div>

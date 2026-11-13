@@ -1,0 +1,11 @@
+<footer class="site-footer wrap">
+  <a class="brand" href="{{ '' | assetUrl }}">Pantory</a>
+  <nav aria-label="Footer navigation">
+    <a href="{{ 'features/' | assetUrl }}"{% if page.url == '/features/' %} aria-current="page"{% endif %}>Features</a>
+    <a href="{{ 'blog/' | assetUrl }}"{% if page.url == '/blog/' %} aria-current="page"{% elif navSection == 'blog' %} aria-current="location"{% endif %}>Blog</a>
+    <a href="{{ 'support/' | assetUrl }}"{% if page.url == '/support/' %} aria-current="page"{% endif %}>Support</a>
+    <a href="{{ 'privacy.html' | assetUrl }}"{% if page.url == '/privacy.html' %} aria-current="page"{% endif %}>Privacy Policy</a>
+    <a href="{{ 'terms.html' | assetUrl }}"{% if page.url == '/terms.html' %} aria-current="page"{% endif %}>Terms of Use</a>
+  </nav>
+  <p class="trademark-note">Apple and the Apple logo are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+</footer>

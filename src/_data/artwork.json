@@ -1,0 +1,36 @@
+{
+  "icon": {
+    "src": "assets/optimized/pantory-icon-192.webp",
+    "width": 192,
+    "height": 192,
+    "bytes": 19548,
+    "alt": "Pantory app icon",
+    "variants": [
+      {
+        "src": "assets/optimized/pantory-icon-96.webp",
+        "width": 96,
+        "height": 96,
+        "bytes": 6526
+      },
+      {
+        "src": "assets/optimized/pantory-icon-192.webp",
+        "width": 192,
+        "height": 192,
+        "bytes": 19548
+      },
+      {
+        "src": "assets/optimized/pantory-icon-288.webp",
+        "width": 288,
+        "height": 288,
+        "bytes": 41964
+      }
+    ],
+    "original": {
+      "src": "assets/images/pantory-icon.png",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 995304,
+      "sha256": "4f38ad51f0137d54de3761ff7dd49a907f97d522ebb4cb5194d37c90ceee1f73"
+    }
+  }
+}

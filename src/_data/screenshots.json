@@ -1,0 +1,148 @@
+{
+  "inventory": {
+    "src": "assets/optimized/inventory-640.webp",
+    "width": 640,
+    "height": 1387,
+    "bytes": 52018,
+    "alt": "Pantory Inventory in Light Mode with search, All and Expiring filters, product photos, quantities, Home and Fridge labels, and Inventory, History, and Settings tabs.",
+    "sizes": "(max-width: 340px) calc(100vw - 55px), (max-width: 600px) 280px, 320px",
+    "variants": [
+      {
+        "src": "assets/optimized/inventory-320.webp",
+        "width": 320,
+        "height": 694,
+        "bytes": 21558
+      },
+      {
+        "src": "assets/optimized/inventory-640.webp",
+        "width": 640,
+        "height": 1387,
+        "bytes": 52018
+      },
+      {
+        "src": "assets/optimized/inventory-960.webp",
+        "width": 960,
+        "height": 2081,
+        "bytes": 87406
+      }
+    ],
+    "original": {
+      "src": "assets/screenshots/inventory.PNG",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1184304,
+      "sha256": "6263d9f6bf78d01e723dda0e77e9be9229c13338bd437dca2fdc41ecc1d580e9"
+    }
+  },
+  "inventory-detail": {
+    "src": "assets/optimized/inventory-detail-640.webp",
+    "width": 640,
+    "height": 459,
+    "bytes": 22470,
+    "alt": "Detail of Inventory rows for sourdough, Coca-Cola Zero, and macaroni, with quantities 2, 1, and 5 and Home or Fridge location labels.",
+    "sizes": "(max-width: 340px) calc(100vw - 71px), (max-width: 600px) 280px, 300px",
+    "variants": [
+      {
+        "src": "assets/optimized/inventory-detail-320.webp",
+        "width": 320,
+        "height": 230,
+        "bytes": 9212
+      },
+      {
+        "src": "assets/optimized/inventory-detail-640.webp",
+        "width": 640,
+        "height": 459,
+        "bytes": 22470
+      },
+      {
+        "src": "assets/optimized/inventory-detail-960.webp",
+        "width": 960,
+        "height": 689,
+        "bytes": 38738
+      }
+    ],
+    "original": {
+      "src": "assets/screenshots/inventory.PNG",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1184304,
+      "sha256": "6263d9f6bf78d01e723dda0e77e9be9229c13338bd437dca2fdc41ecc1d580e9"
+    },
+    "crop": [
+      60,
+      1002,
+      1230,
+      1842
+    ]
+  },
+  "expiring": {
+    "src": "assets/optimized/expiring-640.webp",
+    "width": 640,
+    "height": 1387,
+    "bytes": 54398,
+    "alt": "Pantory Inventory in Dark Mode with Expiring selected, showing an item marked Today and sourdough marked Tomorrow, along with quantities and locations.",
+    "sizes": "(max-width: 340px) calc(100vw - 71px), (max-width: 600px) 280px, 290px",
+    "variants": [
+      {
+        "src": "assets/optimized/expiring-320.webp",
+        "width": 320,
+        "height": 694,
+        "bytes": 22938
+      },
+      {
+        "src": "assets/optimized/expiring-640.webp",
+        "width": 640,
+        "height": 1387,
+        "bytes": 54398
+      },
+      {
+        "src": "assets/optimized/expiring-960.webp",
+        "width": 960,
+        "height": 2081,
+        "bytes": 92900
+      }
+    ],
+    "original": {
+      "src": "assets/screenshots/expiring.PNG",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1166020,
+      "sha256": "44a7a5ccc853eec11fe6c37105baec16b4d8714cecb531c12001c46db8d255c2"
+    }
+  },
+  "scanning": {
+    "src": "assets/optimized/scanning-640.webp",
+    "width": 640,
+    "height": 1387,
+    "bytes": 56606,
+    "alt": "Pantory barcode scanner sheet over Inventory, showing a camera preview of a food package barcode, the instruction to point the camera at a barcode, and Enter manually and Close buttons.",
+    "sizes": "(max-width: 340px) calc(100vw - 71px), (max-width: 600px) 280px, 290px",
+    "variants": [
+      {
+        "src": "assets/optimized/scanning-320.webp",
+        "width": 320,
+        "height": 694,
+        "bytes": 24412
+      },
+      {
+        "src": "assets/optimized/scanning-640.webp",
+        "width": 640,
+        "height": 1387,
+        "bytes": 56606
+      },
+      {
+        "src": "assets/optimized/scanning-960.webp",
+        "width": 960,
+        "height": 2081,
+        "bytes": 92284
+      }
+    ],
+    "original": {
+      "src": "assets/screenshots/barcode-scanner.PNG",
+      "width": 1290,
+      "height": 2796,
+      "bytes": 1466799,
+      "sha256": "8d29cf9ee865e21ba876d81fd4468ec57e196759f04fc2eff441eeab67f2bf48"
+    }
+  }
+}

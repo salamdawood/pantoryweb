@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+supporting: true
+permalink: /support/
+title: Pantory Support — Contact & common questions
+description: Get help with Pantory barcode lookup, expiration dates, reminders, iCloud, sharing, purchases, and the free inventory limit. Contact support by email.
+---
+<div class="supporting-page reading-wrap">
+  <header class="page-intro"><p class="section-label">Pantory support</p><h1>How can we help?</h1><p>Find answers below, or email us about an issue with Pantory.</p></header>
+  <section class="contact-panel" aria-labelledby="contact-heading"><h2 id="contact-heading">Contact support</h2><a class="contact-email" href="mailto:{{ site.support }}">{{ site.support }}</a><p>Include your iOS version, Pantory version, and a short description of what happened. Please don’t send passwords or sensitive information.</p><p>For purchase or access issues, contact us with a description of the issue.</p></section>
+  <section class="support-questions" aria-labelledby="support-questions-heading"><h2 id="support-questions-heading">Common questions</h2><div class="faq-list">
+    <details><summary>A barcode lookup is missing or inaccurate. What can I do?</summary><p>Product information comes from Open Food Facts, and coverage varies. If details are missing or incorrect, use manual entry to record the item’s information. Review returned details for accuracy.</p><p><a href="{{ 'features/' | assetUrl }}#adding-items">About barcode lookup and manual entry</a></p></details>
+    <details><summary>How do I record an expiration date?</summary><p>Expiration dates are entered manually. Barcode scanning does not detect the date printed on a product. Use the product’s date when adding or updating its details.</p><p><a href="{{ 'features/' | assetUrl }}#expiration">About expiration tracking</a></p></details>
+    <details><summary>Why am I not receiving expiration reminders?</summary><p>Notifications require permission. Check Pantory’s notification permissions in iPhone Settings. Free reminders are fixed at three days before expiry; Pro supports up to two configurable reminder times. If the issue continues, contact support.</p></details>
+    <details><summary>What should I check if iCloud sync isn’t working?</summary><p>Personal sync and household sharing use an Apple iCloud account. Check iCloud availability and your internet connection. If the issue continues, email support with your iOS and Pantory versions and a short description.</p><p><a href="{{ 'features/' | assetUrl }}#icloud">About iCloud sync and sharing</a></p></details>
+    <details><summary>Do sharing and Add Again require Pro?</summary><p>Yes. Household sharing and Add Again from History without rescanning require Pantory Pro. Viewing Pantry History and personal iCloud sync are included for free. Household sharing also uses an Apple iCloud account.</p></details>
+    <details><summary>What counts toward the 75-item free limit?</summary><p>The free tier supports up to 75 active inventory items. Finished items in Pantry History do not count toward that limit. Pro offers unlimited active items.</p><p><a href="{{ 'features/' | assetUrl }}#free-pro">Compare Free and Pro</a></p></details>
+    <details><summary>I have a purchase or Pro access issue. Who can help?</summary><p>Please email support with your iOS version, Pantory version, and a short description of the issue. Don’t send passwords or sensitive information.</p></details>
+  </div></section>
+  <nav class="support-legal-links" aria-label="Policies"><a href="{{ 'privacy.html' | assetUrl }}">Privacy Policy</a><a href="{{ 'terms.html' | assetUrl }}">Terms of Use</a></nav>
+</div>

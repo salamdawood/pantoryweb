@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/article.njk",
+  "ogType": "article",
+  "supporting": true,
+  "navSection": "blog"
+}

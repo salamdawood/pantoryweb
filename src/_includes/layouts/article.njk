@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+<article class="article-page reading-wrap">
+  <header class="article-header">
+    <a class="back-link" href="{{ 'blog/' | assetUrl }}">← Pantory Blog</a>
+    <h1>{{ title | escape }}</h1>
+    <p class="article-description">{{ description | escape }}</p>
+    <p class="article-byline">By {{ author | escape }} <span aria-hidden="true">·</span> <time datetime="{{ date | dateISO }}">{{ date | dateLabel }}</time>{% if updated %}<br>Updated <time datetime="{{ updated | dateISO }}">{{ updated | dateLabel }}</time>{% endif %}</p>
+  </header>
+  <div class="article-content">{{ content | safe }}</div>
+  <aside class="article-download" aria-label="Download Pantory">
+    <h2>Keep track with Pantory</h2>
+    <p>Pantry inventory for iPhone.</p>
+    {% include "components/app-store.njk" %}
+  </aside>
+</article>

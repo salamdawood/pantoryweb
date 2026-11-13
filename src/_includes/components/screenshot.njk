@@ -1,0 +1,14 @@
+{% set screenshot = screenshots[shot] %}
+<figure class="product-shot shot-{{ shot }}{% if shot != 'inventory-detail' %} phone-frame{% endif %}">
+  {% if shot != 'inventory-detail' %}
+    <span class="phone-hardware" aria-hidden="true">
+      <span class="phone-island"></span>
+      <span class="phone-earpiece"></span>
+      <span class="phone-side-button phone-action-button"></span>
+      <span class="phone-side-button phone-volume-up"></span>
+      <span class="phone-side-button phone-volume-down"></span>
+      <span class="phone-side-button phone-power-button"></span>
+    </span>
+  {% endif %}
+  <img class="product-image" src="{{ screenshot.src | assetUrl }}" srcset="{% for variant in screenshot.variants %}{{ variant.src | assetUrl }} {{ variant.width }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="{{ screenshot.sizes }}" alt="{{ screenshot.alt }}" width="{{ screenshot.width }}" height="{{ screenshot.height }}" loading="{{ screenshotLoading or 'lazy' }}" decoding="async"{% if screenshotLoading == 'eager' %} fetchpriority="high"{% endif %}>
+</figure>

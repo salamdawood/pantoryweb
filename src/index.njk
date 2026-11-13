@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+title: Pantory — Pantry inventory for iPhone
+description: Keep track of your pantry, fridge, and freezer. Scan barcodes, record expiration dates, and check what you already have before shopping. Free to start.
+---
+<section class="hero wrap" aria-labelledby="hero-title">
+  <img class="app-icon" src="{{ artwork.icon.src | assetUrl }}" srcset="{% for variant in artwork.icon.variants %}{{ variant.src | assetUrl }} {{ variant.width }}w{% if not loop.last %}, {% endif %}{% endfor %}" sizes="(max-width: 600px) 64px, 72px" width="{{ artwork.icon.width }}" height="{{ artwork.icon.height }}" alt="{{ artwork.icon.alt }}">
+  <p class="app-positioning">Pantry inventory for iPhone.</p>
+  <h1 id="hero-title">Know what you have.<br>Use it before it expires.</h1>
+  <p class="lead">Keep track of your pantry, fridge, and freezer. Scan barcodes, record expiration dates, and check what you already have before shopping.</p>
+  {% include "components/app-store.njk" %}
+  <div class="hero-product">
+    {% set shot = "inventory" %}
+    {% set screenshotLoading = "eager" %}
+    {% include "components/screenshot.njk" %}
+  </div>
+</section>
+<section id="features" class="features wrap" aria-label="Pantory features">
+  {% set screenshotLoading = "lazy" %}
+  <article class="feature-section" aria-labelledby="inventory-title">
+    <div class="feature-copy">
+      <p class="section-label">Your inventory</p>
+      <h2 id="inventory-title">Know what’s in your kitchen.</h2>
+      <p>Keep your pantry, fridge, and freezer in one place. Track quantities and locations, then search for what you need before you buy more.</p>
+      <p>Add optional categories and photos to keep your inventory organized your way.</p>
+    </div>
+    <div class="feature-visual">
+      {% set shot = "inventory-detail" %}
+      {% include "components/screenshot.njk" %}
+    </div>
+  </article>
+  <article class="feature-section" aria-labelledby="expiring-title">
+    <div class="feature-copy">
+      <p class="section-label">Expiration tracking</p>
+      <h2 id="expiring-title">See what’s expiring next.</h2>
+      <p>Enter expiration dates manually and use the Expiring view to see what’s coming up, in date order.</p>
+      <p>With notifications enabled, get a reminder three days before expiry. Pro lets you choose up to two reminder times.</p>
+    </div>
+    <div class="feature-visual">
+      {% set shot = "expiring" %}
+      {% include "components/screenshot.njk" %}
+    </div>
+  </article>
+  <article class="feature-section" aria-labelledby="scan-title">
+    <div class="feature-copy">
+      <p class="section-label">Barcode lookup</p>
+      <h2 id="scan-title">Add items with a quick scan.</h2>
+      <p>Scan a barcode to look up available product details, then add the quantity, location, and expiration date. You can always add items manually.</p>
+      <p class="fine-print">Lookup uses Open Food Facts; coverage varies. Expiration dates are entered manually—scanning does not detect the date printed on a product.</p>
+    </div>
+    <div class="feature-visual">
+      {% set shot = "scanning" %}
+      {% include "components/screenshot.njk" %}
+    </div>
+  </article>
+</section>
+<section class="benefits-section" aria-labelledby="benefits-title">
+  <div class="wrap">
+    <h2 id="benefits-title">More ways to keep track.</h2>
+    <div class="benefits-grid">
+      <article><h3>Personal iCloud sync</h3><p>Keep your personal pantry in sync through your Apple iCloud account. Included for free.</p></article>
+      <article><h3>Home Screen widget</h3><p>See your next three expiring items without opening the app. Included for free.</p></article>
+      <article><h3>Pantry History</h3><p>View finished items in History. Add Again from History without rescanning requires Pro.</p></article>
+      <article><h3>Household sharing <span class="pro-badge">Pro</span></h3><p>Share a pantry with your household through iCloud so everyone can view and update it.</p></article>
+    </div>
+  </div>
+</section>
+<section id="plans" class="plans-section wrap" aria-labelledby="plans-title">
+  <div class="plans-intro"><p class="section-label">Free & Pro</p><h2 id="plans-title">Start free.<br>Get more with Pantory Pro.</h2></div>
+  <div class="plans-copy">
+    <p><strong>Free for up to 75 active items.</strong> Includes scanning, basic reminders three days before expiry, personal iCloud sync, Pantry History, and the Home Screen widget. Finished items don’t count toward the limit.</p>
+    <p><strong>Pantory Pro adds</strong> unlimited active items, household sharing, up to two configurable reminder times, and Add Again from History without rescanning.</p>
+    <p class="fine-print">No Pantory signup required. See the App Store for current purchase options.</p>
+    {% include "components/app-store.njk" %}
+  </div>
+</section>
+<section class="faq-section wrap" aria-labelledby="faq-title">
+  <h2 id="faq-title">Questions about Pantory</h2>
+  <div class="faq-list">
+    <details><summary>What’s included for free?</summary><p>Track up to 75 active items with manual entry, barcode lookup, search, the Expiring view, basic reminders, personal iCloud sync, Pantry History, and the widget. Finished items don’t count toward the limit. Pro offers unlimited active items and additional features.</p></details>
+    <details><summary>How does barcode scanning work?</summary><p>Pantory looks up barcodes in Open Food Facts to retrieve available product details. Coverage varies, and information may be incomplete or unavailable. You can always enter items manually.</p></details>
+    <details><summary>Does scanning find the expiration date?</summary><p>No. You enter expiration dates manually. Scanning does not detect the physical expiration date printed on a product.</p></details>
+    <details><summary>Can I share a pantry with my household?</summary><p>Yes. Household sharing requires Pantory Pro and an Apple iCloud account. Invited participants can view and update the shared pantry.</p></details>
+    <details><summary>Do I need to create an account?</summary><p>No Pantory account or signup is required. Personal synchronization and household sharing use your Apple iCloud account.</p></details>
+  </div>
+</section>
+<section class="final-cta" aria-labelledby="final-title">
+  <div class="wrap"><h2 id="final-title">Your pantry, easier to keep track of.</h2>{% include "components/app-store.njk" %}<p class="cta-note">Free to start. Made for iPhone.</p></div>
+</section>

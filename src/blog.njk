@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+supporting: true
+navSection: blog
+permalink: /blog/
+title: Pantory Blog — Pantry organization & inventory guides
+description: Practical guides to keeping track of food in your pantry, fridge, and freezer, from Pantory.
+---
+<div class="supporting-page reading-wrap">
+  <header class="page-intro"><p class="section-label">Pantory blog</p><h1>Keep track of your food.</h1><p>Practical guides to organizing your pantry, fridge, and freezer.</p></header>
+  {% if collections.posts.length %}
+  <ol class="post-list" aria-label="Articles, newest first">
+    {% for post in collections.posts %}
+    <li><article><p class="post-date"><time datetime="{{ post.data.date | dateISO }}">{{ post.data.date | dateLabel }}</time></p><h2><a href="{{ post.url | assetUrl }}">{{ post.data.title | escape }}</a></h2><p>{{ post.data.description | escape }}</p><p class="post-author">By {{ post.data.author | escape }}</p></article></li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <section class="blog-empty" aria-labelledby="empty-heading"><h2 id="empty-heading">No articles yet.</h2><p>Our first guide is still to come. Check back for practical advice on keeping track of your food.</p><a href="{{ 'features/' | assetUrl }}">Explore Pantory’s features</a></section>
+  {% endif %}
+</div>
