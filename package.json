@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "eleventy --serve --port=8080",
     "build": "eleventy",
-    "check": "node scripts/check-output.mjs"
+    "check": "node scripts/check-output.mjs",
+    "check:blog": "node scripts/check-blog.mjs"
   },
-  "devDependencies": { "@11ty/eleventy": "^3.1.2" }
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
 }

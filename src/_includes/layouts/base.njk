@@ -5,17 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title | escape }}</title>
   <meta name="description" content="{{ description | escape }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url | assetUrl }}">
-  <meta property="og:type" content="{{ ogType or 'website' | escape }}">
+  <link rel="canonical" href="{{ page.url | absoluteUrl | escape }}">
+  <meta property="og:type" content="{{ (ogType or 'website') | escape }}">
   <meta property="og:site_name" content="Pantory">
   <meta property="og:title" content="{{ title | escape }}">
   <meta property="og:description" content="{{ description | escape }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url | assetUrl }}">
+  <meta property="og:url" content="{{ page.url | absoluteUrl | escape }}">
   {% if ogType == 'article' %}
   <meta name="author" content="{{ author | escape }}">
-  <meta property="article:author" content="{{ author | escape }}">
   <meta property="article:published_time" content="{{ date | dateISO }}">
   {% if updated %}<meta property="article:modified_time" content="{{ updated | dateISO }}">{% endif %}
+  {% endif %}
+  {% if noindex or (page.url == '/blog/' and not collections.posts.length) %}<meta name="robots" content="noindex, follow">{% endif %}
+  {% set previewImage = socialImage or site.socialImage %}
+  <meta property="og:image" content="{{ previewImage.src | absoluteUrl | escape }}">
+  <meta property="og:image:width" content="{{ previewImage.width }}">
+  <meta property="og:image:height" content="{{ previewImage.height }}">
+  <meta property="og:image:alt" content="{{ previewImage.alt | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | escape }}">
+  <meta name="twitter:description" content="{{ description | escape }}">
+  <meta name="twitter:image" content="{{ previewImage.src | absoluteUrl | escape }}">
+  <meta name="twitter:image:alt" content="{{ previewImage.alt | escape }}">
+  {% if page.url == '/' %}
+  <script type="application/ld+json">{{ site | appJsonLd(artwork.icon) | safe }}</script>
+  {% elif ogType == 'article' %}
+  {% set articleData = {title: title, description: description, author: author, authorType: authorType, date: date, updated: updated, url: page.url} %}
+  <script type="application/ld+json">{{ articleData | articleJsonLd | safe }}</script>
   {% endif %}
   <meta name="theme-color" content="#ECF2EA">
   <link rel="icon" href="{{ 'assets/optimized/favicon.ico' | assetUrl }}" sizes="16x16 32x32 48x48">

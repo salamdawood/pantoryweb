@@ -1,0 +1,203 @@
+[
+  {
+    "viewport": 1440,
+    "results": [
+      {
+        "route": "/",
+        "width": 1440,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 33,
+        "incomplete": [
+          "color-contrast"
+        ],
+        "localNavigationMs": 13.300000011920929
+      },
+      {
+        "route": "features/",
+        "width": 1440,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 39,
+        "incomplete": [],
+        "localNavigationMs": 9.399999976158142
+      },
+      {
+        "route": "support/",
+        "width": 1440,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 30,
+        "incomplete": [],
+        "localNavigationMs": 7.5
+      },
+      {
+        "route": "privacy.html",
+        "width": 1440,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 27,
+        "incomplete": [],
+        "localNavigationMs": 7.399999976158142
+      },
+      {
+        "route": "terms.html",
+        "width": 1440,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 28,
+        "incomplete": [],
+        "localNavigationMs": 7.5
+      },
+      {
+        "route": "blog/",
+        "width": 1440,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 28,
+        "incomplete": [],
+        "localNavigationMs": 6.099999964237213
+      }
+    ]
+  },
+  {
+    "viewport": 390,
+    "results": [
+      {
+        "route": "/",
+        "width": 390,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 33,
+        "incomplete": [
+          "color-contrast"
+        ],
+        "localNavigationMs": 11.400000035762787
+      },
+      {
+        "route": "features/",
+        "width": 390,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 39,
+        "incomplete": [],
+        "localNavigationMs": 7.800000011920929
+      },
+      {
+        "route": "support/",
+        "width": 390,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 30,
+        "incomplete": [],
+        "localNavigationMs": 6.699999988079071
+      },
+      {
+        "route": "privacy.html",
+        "width": 390,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 27,
+        "incomplete": [],
+        "localNavigationMs": 8.299999952316284
+      },
+      {
+        "route": "terms.html",
+        "width": 390,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 28,
+        "incomplete": [],
+        "localNavigationMs": 6
+      },
+      {
+        "route": "blog/",
+        "width": 390,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 28,
+        "incomplete": [],
+        "localNavigationMs": 5.800000011920929
+      }
+    ]
+  },
+  {
+    "viewport": 320,
+    "results": [
+      {
+        "route": "/",
+        "width": 320,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 33,
+        "incomplete": [
+          "color-contrast"
+        ],
+        "localNavigationMs": 10.099999964237213
+      },
+      {
+        "route": "features/",
+        "width": 320,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 39,
+        "incomplete": [],
+        "localNavigationMs": 7
+      },
+      {
+        "route": "support/",
+        "width": 320,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 30,
+        "incomplete": [],
+        "localNavigationMs": 7.899999976158142
+      },
+      {
+        "route": "privacy.html",
+        "width": 320,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 27,
+        "incomplete": [],
+        "localNavigationMs": 7.100000023841858
+      },
+      {
+        "route": "terms.html",
+        "width": 320,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 28,
+        "incomplete": [],
+        "localNavigationMs": 5.600000023841858
+      },
+      {
+        "route": "blog/",
+        "width": 320,
+        "overflow": false,
+        "axeVersion": "4.14.0",
+        "violations": [],
+        "passes": 28,
+        "incomplete": [],
+        "localNavigationMs": 6
+      }
+    ]
+  }
+]

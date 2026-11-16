@@ -1,7 +1,10 @@
 const fs = require("node:fs");
 const path = require("node:path");
-const basePath = "/" + (process.env.BASE_PATH || "/pantoryweb/").split("/").filter(Boolean).join("/") + "/";
-const prefix = basePath === "//" ? "/" : basePath;
+const urls = require('./site.config.js')();
+const { jsonForScript, application, article } = require('./lib/seo.js');
+function publishedPosts(api) {
+  return api.getFilteredByGlob('./src/posts/**/*.md').filter(post => post.data.draft === false);
+}
 
 function asDate(value) {
   const date = value instanceof Date ? value : new Date(value);
@@ -18,7 +21,12 @@ module.exports = function (eleventyConfig) {
     "src/assets/app-store-badge.svg": "assets/app-store-badge.svg",
     "src/assets/optimized": "assets/optimized"
   });
-  eleventyConfig.addFilter("assetUrl", value => prefix + value.replace(/^\//, ""));
+  eleventyConfig.addWatchTarget('./site.config.js');
+  eleventyConfig.addWatchTarget('./lib/');
+  eleventyConfig.addFilter('assetUrl', urls.pathFor);
+  eleventyConfig.addFilter('absoluteUrl', urls.urlFor);
+  eleventyConfig.addFilter('appJsonLd', (site, icon) => jsonForScript(application(site, icon, urls.urlFor)));
+  eleventyConfig.addFilter('articleJsonLd', data => jsonForScript(article(data, urls.urlFor)));
   eleventyConfig.addFilter("dateISO", value => asDate(value).toISOString());
   eleventyConfig.addFilter("dateLabel", value => new Intl.DateTimeFormat("en-US", {
     year: "numeric", month: "long", day: "numeric", timeZone: "UTC"
@@ -39,14 +47,20 @@ module.exports = function (eleventyConfig) {
     if (!/^\/blog\/[a-z0-9-]+(?:\/[a-z0-9-]+)*\/$/.test(data.permalink)) {
       throw new Error(`${this.inputPath}: use a stable /blog/slug/ permalink`);
     }
+    if (data.authorType && !['Person', 'Organization'].includes(data.authorType)) throw new Error('authorType must be Person or Organization');
     if (data.draft) return false;
   });
-  eleventyConfig.addCollection("posts", api => api.getFilteredByGlob("./src/posts/**/*.md")
-    .filter(post => post.data.draft === false)
+  eleventyConfig.addCollection("posts", api => publishedPosts(api)
     .sort((a, b) => asDate(b.data.date) - asDate(a.data.date) || a.url.localeCompare(b.url)));
+  eleventyConfig.addCollection('sitemapPages', api => {
+    const hasPosts = publishedPosts(api).length > 0;
+    return api.getAll().filter(item => item.url && (item.url.endsWith('/') || item.url.endsWith('.html'))
+      && !item.data.draft && !item.data.noindex && item.data.sitemap !== false
+      && (item.url !== '/blog/' || hasPosts)).sort((a, b) => a.url.localeCompare(b.url));
+  });
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
-    pathPrefix: prefix,
+    pathPrefix: urls.basePath,
     templateFormats: ["njk", "md", "html"],
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"

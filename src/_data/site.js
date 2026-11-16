@@ -1,9 +1,12 @@
-const basePath = process.env.BASE_PATH || "/pantoryweb/";
+const urls = require('../../site.config.js')();
 module.exports = {
-  name: "Pantory",
-  // Keep the deployed origin here until the custom-domain migration is verified.
-  url: (process.env.SITE_URL || "https://salamdawood.github.io").replace(/\/$/, ""),
-  basePath,
-  appStore: "https://apps.apple.com/us/app/pantry-inventory-pantory/id6772602868",
-  support: "salamd135@gmail.com"
+  name: 'Pantory',
+  url: urls.origin,
+  basePath: urls.basePath,
+  appStore: 'https://apps.apple.com/us/app/pantry-inventory-pantory/id6772602868',
+  support: 'support@getpantory.com',
+  socialImage: {
+    src: 'assets/optimized/pantory-social.png', width: 1200, height: 630,
+    alt: 'Pantory app icon and the words: Know what you have. Use it before it expires.'
+  }
 };

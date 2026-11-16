@@ -1,0 +1,436 @@
+/* Supporting pages and article typography; homepage presentation lives in style.css. */
+.supporting-page {
+  padding-block: 44px 60px;
+}
+
+.reading-wrap {
+  width: min(740px, calc(100% - 80px));
+  margin-inline: auto;
+}
+
+.page-intro {
+  max-width: 790px;
+  margin-bottom: 36px;
+}
+
+.page-intro h1,
+.article-header h1 {
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: -1.8px;
+  line-height: 1.12;
+}
+
+.page-intro > p:last-child {
+  max-width: 650px;
+  margin-top: 22px;
+  font-size: 17px;
+}
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding-block: 20px;
+  border-block: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.supporting-page h2,
+.article-download h2 {
+  font-size: 30px;
+  letter-spacing: -.8px;
+  margin-bottom: 18px;
+  text-wrap: initial;
+}
+
+.capability-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  padding-block: 45px;
+}
+
+.capability-block {
+  padding-block: 38px;
+  border-top: 1px solid var(--line);
+}
+
+.capability-row p,
+.capability-block p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.capability-row ul {
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.capability-row li + li {
+  margin-top: 8px;
+}
+
+.capability-image {
+  display: flex;
+  justify-content: center;
+  background: var(--sage);
+  border-radius: 18px;
+  padding: 25px 12px;
+}
+
+.capability-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-block: 24px 5px;
+}
+
+.capability-pair h3 {
+  margin-bottom: 10px;
+}
+
+.comparison-section {
+  padding-block: 38px;
+  border-top: 1px solid var(--line);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin-block: 25px 15px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  table-layout: fixed;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.comparison-table caption {
+  text-align: left;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.comparison-table th:first-child {
+  width: 44%;
+}
+
+.comparison-table thead th {
+  background: var(--sage);
+  font-weight: 650;
+}
+
+.comparison-table tbody th {
+  font-weight: 550;
+}
+
+.comparison-table td {
+  color: var(--muted);
+}
+
+.supporting-download {
+  border-top: 1px solid var(--line);
+  padding-top: 35px;
+  text-align: center;
+}
+
+.contact-panel {
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--sage);
+  padding: 30px;
+  margin-bottom: 42px;
+}
+
+.contact-panel h2 {
+  font-size: 25px;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  margin-bottom: 20px;
+}
+
+.contact-panel p {
+  font-size: 14px;
+}
+
+.contact-panel p + p {
+  margin-top: 14px;
+}
+
+.support-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.blog-empty {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--sage);
+}
+
+.blog-empty h2 {
+  font-size: 26px;
+}
+
+.blog-empty p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.blog-empty a {
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list li {
+  border-top: 1px solid var(--line);
+  padding-block: 28px;
+}
+
+.post-list h2 {
+  font-size: 28px;
+  margin-block: 12px 15px;
+}
+
+.post-list h2 a {
+  text-decoration: none;
+}
+
+.post-list h2 a:hover {
+  text-decoration: underline;
+}
+
+.post-list article > p:not(.post-date):not(.post-author) {
+  font-size: 15px;
+}
+
+.post-date,
+.post-author {
+  font-size: 12px;
+}
+
+.post-author {
+  margin-top: 15px;
+}
+
+.article-page {
+  padding-block: 30px 55px;
+}
+
+.article-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 27px;
+  margin-bottom: 32px;
+}
+
+.article-header .back-link {
+  margin: 0 0 26px;
+}
+
+.article-description {
+  font-size: 18px;
+  margin-top: 22px;
+}
+
+.article-byline {
+  font-size: 12px;
+  margin-top: 23px;
+  line-height: 1.9;
+}
+
+.article-byline span {
+  margin-inline: 5px;
+}
+
+.article-content {
+  font-size: 17px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.article-content h2 {
+  font-size: 29px;
+  letter-spacing: -.7px;
+  margin: 35px 0 18px;
+  scroll-margin-top: 24px;
+}
+
+.article-content h3 {
+  font-size: 22px;
+  margin: 28px 0 14px;
+}
+
+.article-content p,
+.article-content ul,
+.article-content ol,
+.article-content blockquote {
+  margin-bottom: 22px;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 25px;
+  color: var(--muted);
+}
+
+.article-content li + li {
+  margin-top: 8px;
+}
+
+.article-content blockquote {
+  margin-inline: 0;
+  padding: 8px 0 8px 22px;
+  border-left: 3px solid var(--line);
+}
+
+.article-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.article-content pre {
+  overflow-x: auto;
+  font-size: 14px;
+  background: var(--sage);
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.article-download {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  margin-top: 40px;
+}
+
+.article-download h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.article-download p {
+  font-size: 14px;
+}
+
+.article-download .app-store {
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .reading-wrap {
+    width: calc(100% - 40px);
+  }
+
+  .supporting-page,
+  .article-page {
+    padding-block: 28px 40px;
+  }
+
+  .page-intro h1,
+  .article-header h1 {
+    font-size: 34px;
+    letter-spacing: -1.2px;
+  }
+
+  .page-intro > p:last-child,
+  .article-description {
+    font-size: 15px;
+  }
+
+  .capability-row,
+  .capability-pair {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .capability-row,
+  .capability-block,
+  .comparison-section {
+    padding-block: 30px;
+  }
+
+  .supporting-page h2 {
+    font-size: 26px;
+  }
+
+  .capability-row p,
+  .capability-block p {
+    font-size: 14px;
+  }
+
+  .capability-image .product-shot {
+    width: min(280px, 100%);
+  }
+
+  .comparison-table {
+    font-size: 11px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px 7px;
+  }
+
+  .comparison-table th:first-child {
+    width: 40%;
+  }
+
+  .contact-panel,
+  .blog-empty {
+    padding: 23px 20px;
+  }
+
+  .contact-email {
+    font-size: 18px;
+  }
+
+  .section-nav {
+    font-size: 12px;
+    gap: 12px 18px;
+  }
+
+  .article-content {
+    font-size: 16px;
+  }
+
+  .article-content h2 {
+    font-size: 26px;
+  }
+
+  .post-list h2 {
+    font-size: 25px;
+  }
+}
