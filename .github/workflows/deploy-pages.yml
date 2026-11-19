@@ -1,0 +1,71 @@
+name: Deploy Pantory to GitHub Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Select the build that matches the configured Pages domain
+        required: true
+        type: choice
+        default: project
+        options:
+          - project
+          - custom-domain
+
+permissions: {}
+
+concurrency:
+  group: pantory-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      SITE_URL: ${{ inputs.target == 'custom-domain' && 'https://getpantory.com' || 'https://salamdawood.github.io' }}
+      BASE_PATH: ${{ inputs.target == 'custom-domain' && '/' || '/pantoryweb/' }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Read Pages configuration
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Verify the target matches Pages
+        env:
+          PAGES_HOST: ${{ steps.pages.outputs.host }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          if [[ "https://${PAGES_HOST}${PAGES_BASE_PATH%/}/" != "${SITE_URL}${BASE_PATH}" ]]; then
+            echo "::error::Pages host and path do not match the selected deployment target."
+            exit 1
+          fi
+      - run: npm ci
+      - run: npm run check:blog
+      - run: npm run build
+      - run: npm run check
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
